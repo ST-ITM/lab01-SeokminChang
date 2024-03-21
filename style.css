@@ -40,7 +40,41 @@
 
   .content {
     width: 80%; /* 컨텐츠 너비를 80%로 설정 */
-    margin: 80px auto 0 auto; /* 상단 여백을 메뉴바 높이 이상으로 설정하고 좌우 마진을 auto로 설정하여 가운데 정렬 */
+    margin: 80px auto 20px auto; /* 상단 여백을 메뉴바 높이 이상으로 설정하고 좌우 마진을 auto로 설정하여 가운데 정렬 */
     padding: 20px; /* 컨텐츠 내부 패딩 */
     text-align: center; /* 텍스트를 가운데 정렬 */
+}
+.horizontal-sections {
+    display: flex; /* Flexbox를 활성화하여 자식 요소들을 가로로 배치합니다. */
+}
+
+.background-section, .education-section, .experience-section {
+    flex: 1; /* 각 섹션에 동등한 공간을 할당합니다. */
+    margin-top: 20px; /* 섹션 상단의 여백 추가 */
+    padding: 10px; /* 섹션 내부 여백 추가 */
+    line-height: 1.5;
+}
+
+.background-section {
+    background-color: #f0f0f0; /* 배경 파트의 배경색 */
+}
+
+.education-section {
+    background-color: #e0e0e0; /* 교육 파트의 배경색 */
+}
+
+.experience-section {
+    background-color: #d0d0d0; /* 경험 파트의 배경색 */
+}
+
+.icon-container {
+    display: flex; /* 아이콘들을 flexbox로 표시 */
+    justify-content: center; /* 아이콘들을 컨테이너의 시작 부분에 정렬 */
+    gap: 20px; /* 아이콘들 사이의 간격을 20px로 설정 */
+    margin-top: 20px; /* 컨테이너의 상단 마진을 20px로 설정 */
+  }
+.icon-text {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-size: 12px; /* 폰트 크기 */
+    margin-top: 5px; /* 아이콘과 텍스트 사이 간격 */
 }
