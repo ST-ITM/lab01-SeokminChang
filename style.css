@@ -12,7 +12,7 @@
     color: #fff;
   }
   
-  .menu {
+  .nav {
     position: fixed; /* 메뉴바를 화면 상단에 고정 */
     top: 0;
     left: 0;
@@ -23,17 +23,17 @@
     text-align: center; /* 가운데 정렬 */
   }
   
-  .menu > li {
+  .nav > li {
     display: inline-block; /* 메뉴 항목들을 가로로 나열 */
     width: 150px; /* 각 항목의 너비 */
     line-height: 40px; /* 높이 설정 */
   }
   
-  .menu a {
+  .nav a {
     color: #fff;
   }
   
-  .menu > li:hover {
+  .nav > li:hover {
     background-color: #94a9ff;
     transition-duration: 0.5s;
   }
