@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    color: #fff;
+  }
+  
+  .menu {
+    position: fixed; /* 메뉴바를 화면 상단에 고정 */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%; /* 화면 전체 너비 */
+    margin: 0 auto; /* 가운데 정렬을 위한 마진 설정 */
+    background-color: #5778ff; /* 배경색 */
+    text-align: center; /* 가운데 정렬 */
+  }
+  
+  .menu > li {
+    display: inline-block; /* 메뉴 항목들을 가로로 나열 */
+    width: 150px; /* 각 항목의 너비 */
+    line-height: 40px; /* 높이 설정 */
+  }
+  
+  .menu a {
+    color: #fff;
+  }
+  
+  .menu > li:hover {
+    background-color: #94a9ff;
+    transition-duration: 0.5s;
+  }
+
+  .content {
+    width: 80%; /* 컨텐츠 너비를 80%로 설정 */
+    margin: 80px auto 0 auto; /* 상단 여백을 메뉴바 높이 이상으로 설정하고 좌우 마진을 auto로 설정하여 가운데 정렬 */
+    padding: 20px; /* 컨텐츠 내부 패딩 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+}
