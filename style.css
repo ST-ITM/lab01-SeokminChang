@@ -12,31 +12,39 @@
     color: #fff;
   }
   
-  .nav {
-    position: fixed; /* 메뉴바를 화면 상단에 고정 */
+  .navi {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    width: 100%; /* 화면 전체 너비 */
-    margin: 0 auto; /* 가운데 정렬을 위한 마진 설정 */
-    background-color: #5778ff; /* 배경색 */
-    text-align: center; /* 가운데 정렬 */
-  }
-  
-  .nav > li {
-    display: inline-block; /* 메뉴 항목들을 가로로 나열 */
-    width: 150px; /* 각 항목의 너비 */
-    line-height: 40px; /* 높이 설정 */
-  }
-  
-  .nav a {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #5778ff;
+    text-align: center;
+    justify-content: center;
+}
+
+.navi li {
+    display: inline-block;
+    width: 150px;
+    line-height: 40px;
+}
+
+.navi li a {
     color: #fff;
-  }
-  
-  .nav > li:hover {
+    font-size: 20px !important; /* 여기서 선택자를 수정했습니다 */
+    text-decoration: none; /* 링크에 밑줄이 생기는 것을 방지 */
+}
+
+.navi li:hover {
     background-color: #94a9ff;
     transition-duration: 0.5s;
-  }
+}
+
+.navi li:hover a {
+    color: #fff; /* 마우스를 올렸을 때 <a> 태그의 색상을 유지 */
+}
+
 
   .content {
     width: 80%; /* 컨텐츠 너비를 80%로 설정 */
@@ -164,5 +172,37 @@
     .icon-text {
         font-size: 10px; /* 아이콘 텍스트 크기 줄임 */
     }
+}
+
+input, button {
+    width: 100%; /* 가로 크기를 부모 요소에 맞춤 */
+    padding: 10px; /* 안쪽 여백으로 세로 크기 조정 */
+    margin-bottom: 10px; /* 요소 사이의 간격 */
+}
+
+form {
+    display: flex; /* Flex 컨테이너 설정 */
+    flex-wrap: wrap; /* 요소들이 넘칠 경우 다음 줄로 이동 */
+    max-width: 500px; /* 폼의 최대 가로 크기 */
+    margin: auto; /* 중앙 정렬 */
+}
+
+form:first-child input {
+    flex: 1 1 50%; /* 이름과 이메일 입력란의 가로 너비를 부모의 50%로 설정 */
+}
+
+input[name="content"] {
+    flex: 1 1 100%; /* 메시지 입력란을 부모의 100% 너비로 설정 */
+    height: 200px; /* 메시지 입력란의 높이 */
+}
+
+.button {
+    max-width: 500px; /* 버튼 컨테이너의 최대 가로 크기 */
+    margin: auto; /* 중앙 정렬 */
+}
+
+.button button {
+    width: 100%; /* 버튼의 가로 크기를 부모 요소에 맞춤 */
+    font-size: 16px; /* 버튼의 폰트 크기 */
 }
 
