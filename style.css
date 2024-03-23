@@ -43,6 +43,8 @@
     margin: 80px auto 20px auto; /* 상단 여백을 메뉴바 높이 이상으로 설정하고 좌우 마진을 auto로 설정하여 가운데 정렬 */
     padding: 20px; /* 컨텐츠 내부 패딩 */
     text-align: center; /* 텍스트를 가운데 정렬 */
+    max-width: 800px;
+    overflow-wrap: break-word;
 }
 .horizontal-sections {
     display: flex; /* Flexbox를 활성화하여 자식 요소들을 가로로 배치합니다. */
@@ -78,3 +80,57 @@
     font-size: 12px; /* 폰트 크기 */
     margin-top: 5px; /* 아이콘과 텍스트 사이 간격 */
 }
+
+.project-1 {
+    background-color: #e0e0e0; /* 연한 카키색 */
+    padding: 20px; /* 내용과 테두리 사이의 여백 */
+    margin-bottom: 20px; /* 이 영역과 다음 영역 사이의 간격 */
+  }
+  
+  .project-2 {
+    background-color: #e0e0e0; /* 연한 파란색 */
+    padding: 20px; /* 내용과 테두리 사이의 여백 */
+  }
+  
+  @media (max-width: 768px) {
+    /* 이미지 크기 조정 */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* 네비게이션 항목 스타일 */
+    .nav > li {
+        width: 100%; /* 네비게이션 항목을 화면 전체 너비로 확장 */
+        line-height: 30px; /* 높이 줄임 */
+    }
+
+    /* 컨텐츠 및 가로 섹션 너비 조정 */
+    .content, .horizontal-sections {
+        width: 95%; /* 컨텐츠 너비를 화면의 95%로 조정 */
+        margin: 120px auto 20px auto; /* 상단 여백 조정 */
+    }
+
+    /* 가로 섹션 내부 요소들을 세로로 배치 */
+    .horizontal-sections .background-section,
+    .horizontal-sections .education-section,
+    .horizontal-sections .experience-section {
+        flex-direction: column;
+    }
+
+    /* 프로젝트 영역 패딩 조정 */
+    .project-1, .project-2 {
+        padding: 10px;
+    }
+
+    /* 아이콘 컨테이너 스타일 */
+    .icon-container {
+        flex-wrap: wrap; /* 아이콘 컨테이너를 여러 줄로 나눔 */
+    }
+
+    /* 아이콘 텍스트 크기 조정 */
+    .icon-text {
+        font-size: 10px; /* 아이콘 텍스트 크기 줄임 */
+    }
+}
+
