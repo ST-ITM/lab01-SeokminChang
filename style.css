@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    color: #fff;
+  }
+  
+  .navi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #5778ff;
+    text-align: center;
+    justify-content: center;
+}
+
+.navi li {
+    display: inline-block;
+    width: 150px;
+    line-height: 40px;
+}
+
+.navi li a {
+    color: #fff;
+    font-size: 20px !important; /* 여기서 선택자를 수정했습니다 */
+    text-decoration: none; /* 링크에 밑줄이 생기는 것을 방지 */
+}
+
+.navi li:hover {
+    background-color: #94a9ff;
+    transition-duration: 0.5s;
+}
+
+.navi li:hover a {
+    color: #fff; /* 마우스를 올렸을 때 <a> 태그의 색상을 유지 */
+}
+
+
+  .content {
+    width: 80%; /* 컨텐츠 너비를 80%로 설정 */
+    margin: 80px auto 20px auto; /* 상단 여백을 메뉴바 높이 이상으로 설정하고 좌우 마진을 auto로 설정하여 가운데 정렬 */
+    padding: 20px; /* 컨텐츠 내부 패딩 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    max-width: 800px;
+    overflow-wrap: break-word;
+}
+.horizontal-sections {
+    display: flex; /* Flexbox를 활성화하여 자식 요소들을 가로로 배치합니다. */
+}
+
+.background-section, .education-section, .experience-section {
+    flex: 1; /* 각 섹션에 동등한 공간을 할당합니다. */
+    margin-top: 20px; /* 섹션 상단의 여백 추가 */
+    padding: 10px; /* 섹션 내부 여백 추가 */
+    line-height: 1.5;
+}
+
+.background-section {
+    background-color: #f0f0f0; /* 배경 파트의 배경색 */
+}
+
+.education-section {
+    background-color: #e0e0e0; /* 교육 파트의 배경색 */
+}
+
+.experience-section {
+    background-color: #d0d0d0; /* 경험 파트의 배경색 */
+}
+
+.icon-container {
+    display: flex; /* 아이콘들을 flexbox로 표시 */
+    justify-content: center; /* 아이콘들을 컨테이너의 시작 부분에 정렬 */
+    gap: 20px; /* 아이콘들 사이의 간격을 20px로 설정 */
+    margin-top: 20px; /* 컨테이너의 상단 마진을 20px로 설정 */
+  }
+.icon-text {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-size: 12px; /* 폰트 크기 */
+    margin-top: 5px; /* 아이콘과 텍스트 사이 간격 */
+}
+
+.project-1 {
+    background-color: #e0e0e0; /* 연한 카키색 */
+    padding: 20px; /* 내용과 테두리 사이의 여백 */
+    margin-bottom: 20px; /* 이 영역과 다음 영역 사이의 간격 */
+  }
+  
+  .project-2 {
+    background-color: #e0e0e0; /* 연한 파란색 */
+    padding: 20px; /* 내용과 테두리 사이의 여백 */
+  }
+  
+  .skill {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-bottom: 20px;
+}
+
+.icon-text-container {
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    margin-right: 20px; /* 게이지바와의 간격 */
+}
+
+.progress {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #4CAF50;
+    height: 100%;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+
+  @media (max-width: 768px) {
+    /* 이미지 크기 조정 */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* 네비게이션 항목 스타일 */
+    .nav > li {
+        width: 100%; /* 네비게이션 항목을 화면 전체 너비로 확장 */
+        line-height: 30px; /* 높이 줄임 */
+    }
+
+    /* 컨텐츠 및 가로 섹션 너비 조정 */
+    .content, .horizontal-sections {
+        width: 95%; /* 컨텐츠 너비를 화면의 95%로 조정 */
+        margin: 120px auto 20px auto; /* 상단 여백 조정 */
+    }
+
+    /* 가로 섹션 내부 요소들을 세로로 배치 */
+    .horizontal-sections .background-section,
+    .horizontal-sections .education-section,
+    .horizontal-sections .experience-section {
+        flex-direction: column;
+    }
+
+    /* 프로젝트 영역 패딩 조정 */
+    .project-1, .project-2 {
+        padding: 10px;
+    }
+
+    /* 아이콘 컨테이너 스타일 */
+    .icon-container {
+        flex-wrap: wrap; /* 아이콘 컨테이너를 여러 줄로 나눔 */
+    }
+
+    /* 아이콘 텍스트 크기 조정 */
+    .icon-text {
+        font-size: 10px; /* 아이콘 텍스트 크기 줄임 */
+    }
+}
+
+input, button {
+    width: 100%; /* 가로 크기를 부모 요소에 맞춤 */
+    padding: 10px; /* 안쪽 여백으로 세로 크기 조정 */
+    margin-bottom: 10px; /* 요소 사이의 간격 */
+}
+
+form {
+    display: flex; /* Flex 컨테이너 설정 */
+    flex-wrap: wrap; /* 요소들이 넘칠 경우 다음 줄로 이동 */
+    max-width: 500px; /* 폼의 최대 가로 크기 */
+    margin: auto; /* 중앙 정렬 */
+}
+
+form:first-child input {
+    flex: 1 1 50%; /* 이름과 이메일 입력란의 가로 너비를 부모의 50%로 설정 */
+}
+
+input[name="content"] {
+    flex: 1 1 100%; /* 메시지 입력란을 부모의 100% 너비로 설정 */
+    height: 200px; /* 메시지 입력란의 높이 */
+}
+
+.button {
+    max-width: 500px; /* 버튼 컨테이너의 최대 가로 크기 */
+    margin: auto; /* 중앙 정렬 */
+}
+
+.button button {
+    width: 100%; /* 버튼의 가로 크기를 부모 요소에 맞춤 */
+    font-size: 16px; /* 버튼의 폰트 크기 */
+}
+
